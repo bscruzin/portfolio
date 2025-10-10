@@ -57,3 +57,10 @@ button {
   justify-self: start;              
   padding: 0.5em 1em;
 }
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1.5em;
+  margin-top: 2rem;
+}
