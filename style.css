@@ -74,3 +74,20 @@ button {
 .projects article h2 {
   margin: 0;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text_wrap: balance;
+
+  & + p {
+    margin-top: 0.25em;
+  }
+}
+
+h1 {
+  font-size: 400%;
+}
+
+h2 {
+  font-size: 150%;
+}
