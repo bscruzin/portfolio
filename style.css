@@ -39,3 +39,21 @@ nav a.current{
   padding-bottom: 0.1em;  
   font-weight: bold;
 }
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;  
+  gap: 1em;                         
+}
+
+label {
+  display: grid;
+  grid-template-columns: subgrid;   
+  grid-column: 1 / -1;              
+}
+
+button {
+  grid-column: 1 / -1;              
+  justify-self: start;              
+  padding: 0.5em 1em;
+}
