@@ -94,17 +94,19 @@ h2 {
 
 .cv h1 {
   font-size: 300%;
-  text-align: center;
+  color: var(--color-accent);
 }
 
 .cv h2 {
   font-size: 180%;
-  border-bottom: 2px solid var(--color-accent);
+  color: oklch(55% 50% 260);
+  font-weight: 700;
 }
 
 .cv h3 {
   font-size: 120%;
   color: var(--color-accent);
+  font-weight: 600;
 }
 
 .cv ul {
