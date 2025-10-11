@@ -94,7 +94,7 @@ h2 {
 
 .cv h1 {
   font-size: 300%;
-  color: var(--color-accent);
+  color: black;
 }
 
 .cv h2 {
@@ -105,7 +105,7 @@ h2 {
 
 .cv h3 {
   font-size: 120%;
-  color: var(--color-accent);
+  color: black;
   font-weight: 600;
 }
 
