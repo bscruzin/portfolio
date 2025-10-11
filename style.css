@@ -91,3 +91,22 @@ h1 {
 h2 {
   font-size: 150%;
 }
+
+.cv h1 {
+  font-size: 300%;
+  text-align: center;
+}
+
+.cv h2 {
+  font-size: 180%;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.cv h3 {
+  font-size: 120%;
+  color: var(--color-accent);
+}
+
+.cv ul {
+  list-style-type: "– ";
+}
