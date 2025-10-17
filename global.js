@@ -4,11 +4,14 @@ function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
-const navLinks = &&("nav a");
+const navLinks = $$("nav a");
 
 let currentLink = navLinks.find(
   (a) => a.host === location.host && a.pathname === location.pathname);
 
-if (currentLink) {
-  currentLink.classList.add("current");
-}
+// first option
+//if (currentLink) {
+// currentLink.classList.add("current");}
+
+// second cleaner option
+currentLink?.classList.add("current");
