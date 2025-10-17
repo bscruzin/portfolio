@@ -6,8 +6,8 @@ function $$(selector, context = document) {
 
 const navLinks = &&("nav a");
 
-const currentLink = navLinks.find(link =>
-  link.host === location.host && link.pathname === location.pathname);
+let currentLink = navLinks.find(
+  (a) => a.host === location.host && a.pathname === location.pathname);
 
 if (currentLink) {
   currentLink.classList.add("current");
