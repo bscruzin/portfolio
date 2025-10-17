@@ -5,4 +5,10 @@ function $$(selector, context = document) {
 }
 
 const navLinks = &&("nav a");
-console.log(navLinks);
+
+const currentLink = navLinks.find(link =>
+  link.host === location.host && link.pathname === location.pathname);
+
+if (currentLink) {
+  currentLink.classList.add("current");
+}
