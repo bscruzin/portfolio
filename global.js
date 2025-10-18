@@ -7,7 +7,7 @@ function $$(selector, context = document) {
 let pages = [
   { url: "", title: "Home"},
   { url: "projects/", title: "Projects"},
-  { url: "contacts/", title: "Contact"},
+  { url: "contact/", title: "Contact"},
   { url: "cv/", title: "CV"},
   { url: "https://github.com/bscruzin", title: "Profile"},
   ];
@@ -22,8 +22,7 @@ document.body.prepend(nav);
 for (let p of pages) {
   let url = !p.url.startsWith("http") ? BASE_PATH + p.url : p.url;
   let title = p.title;
-
-  nav.insertAdjacentHTML("beforeend", '<a href="${url}">${title}</a>`);
+  nav.insertAdjacentHTML("beforeend", `<a href="${url}">${title}</a>`);
 }
 const navLinks = $$("nav a");
 
