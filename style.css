@@ -1,7 +1,8 @@
 html {
-  color-scheme: dark;
+  color-scheme: light dark;
   background-color: Canvas;
   color: CanvasText;
+   --color-accent: oklch(65% 50% 0);
 }
 
 body{
@@ -9,7 +10,6 @@ body{
   and use the OS's UI font as the website font
   */
   font: 100%/1.5 system-ui;
-
   max-width: 100ch;
   margin-inline: auto;
   padding: 1rem;
@@ -19,9 +19,15 @@ body{
   position: absolute;
   top: 1rem;
   right: 1rem;
-
   font-size: 80%;
   font-family: inherit;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
 }
 
 nav {
@@ -31,13 +37,6 @@ nav {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: var(--border-color);
-}
-
-input,
-textarea,
-button,
-select {
-  font: inherit;
 }
 
 nav a {
@@ -114,7 +113,7 @@ h2 {
 
 .cv h1 {
   font-size: 300%;
-  color: black;
+  color: CanvasText;
 }
 
 .cv h2 {
@@ -125,7 +124,7 @@ h2 {
 
 .cv h3 {
   font-size: 120%;
-  color: black;
+  color: CanvasText;
   font-weight: 600;
 }
 
