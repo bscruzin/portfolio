@@ -19,7 +19,9 @@ nav {
   --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
   margin-bottom: 2rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--border-color);
 }
 
 nav a {
