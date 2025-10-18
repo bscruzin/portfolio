@@ -1,6 +1,10 @@
 html {
   --color-accent: oklch(95% 3% 120);
   accent-color: var(--color-accent);
+
+  color-sheme: light dark;
+  background-color: Canvas;
+  color: CanvasText;
 }
 
 body{
