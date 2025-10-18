@@ -15,6 +15,15 @@ body{
   padding: 1rem;
 }
 
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  font-size: 80%;
+  font-family: inherit;
+}
+
 nav {
   --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
@@ -22,6 +31,13 @@ nav {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: var(--border-color);
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
 }
 
 nav a {
