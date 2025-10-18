@@ -22,16 +22,31 @@ document.body.prepend(nav);
 for (let p of pages) {
   let url = !p.url.startsWith("http") ? BASE_PATH + p.url : p.url;
   let title = p.title;
-  nav.insertAdjacentHTML("beforeend", `<a href="${url}">${title}</a>`);
-}
-const navLinks = $$("nav a");
+  
+  let a = document.createElement("a");
+  a.href = url;
+  a.textContent = p.title;
 
-let currentLink = navLinks.find(
-   (a) => a.host === location.host && a.pathname === location.pathname);
+  a.classList.toggle(
+    "current", 
+    a.host === location.host && a.pathname === location.pathname
+  );
+
+  // Open external links (different host) in a new tab
+  if (a.host !== location.host) {
+    a.target = "_blank";
+  }
+
+  nav.append(a);
+}
+// const navLinks = $$("nav a");
+
+// let currentLink = navLinks.find(
+//    (a) => a.host === location.host && a.pathname === location.pathname);
 
 // // first option
 // if (currentLink) {
 //  currentLink.classList.add("current");}
 
 // // second cleaner option
-currentLink?.classList.add("current");
+// currentLink?.classList.add("current");
