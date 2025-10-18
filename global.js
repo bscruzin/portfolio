@@ -68,6 +68,23 @@ select.addEventListener('input', function (event) {
 	localStorage.colorScheme = scheme;
 });
 
+const form = document.querySelector("form");
+
+form?.addEventListener("submit", function (event) {
+  event.preventDefault(); 
+
+  const data = new FormData(form);
+  let params = [];
+
+  for (let [name, value] of data) {
+    params.push(`${name}=${encodeURIComponent(value)}`);
+  }
+
+  let url = form.action + "?" + params.join("&");
+  console.log("Redirecting to:", url);
+  location.href = url;
+});
+
 
 // const navLinks = $$("nav a");
 
