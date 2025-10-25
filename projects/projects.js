@@ -20,4 +20,5 @@ import { fetchJSON, renderProjects } from '../global.js';
   const titleEl = document.querySelector('.projects-title');
   if (titleEl) {
     titleEl.textContent = `Projects (${projects.length})`;
+  }
 })();
