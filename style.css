@@ -131,3 +131,20 @@ h2 {
 .cv ul {
   list-style-type: "– ";
 }
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 0.5rem 1rem; 
+  text-align: center;
+}
+
+#profile-stats dt {
+  font-weight: bold;
+  grid-row: 1; 
+}
+
+#profile-stats dd {
+  margin: 0; 
+  grid-row: 2; 
+}
