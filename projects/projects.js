@@ -16,4 +16,9 @@ import { fetchJSON, renderProjects } from '../global.js';
   }
 
   renderProjects(projects, projectsContainer, 'h2');
+
+  const title = document.querySelector('.projects-title');
+  if (title) {
+    title.textContent = `Projects (${projects.length})`;
+  }
 })();
