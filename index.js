@@ -1,4 +1,4 @@
-import { fetchJSON, renderProjects } from './global.js';
+import { fetchJSON, renderProjects, fetchGitHubData } from './global.js';
 
 (async function () {
   const projects = await fetchJSON('./lib/projects.json');
@@ -18,4 +18,6 @@ import { fetchJSON, renderProjects } from './global.js';
   }
   
   renderProjects(latestProjects, projectsContainer, 'h2');
+
+  const githubData = await fetchGitHubData('bscruzin');
 })();
