@@ -20,4 +20,6 @@ import { fetchJSON, renderProjects, fetchGitHubData } from './global.js';
   renderProjects(latestProjects, projectsContainer, 'h2');
 
   const githubData = await fetchGitHubData('bscruzin');
+
+  const profileStats = document.querySelector('#profile-stats');
 })();
