@@ -118,6 +118,16 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
   }
 }
 
+export async function fetchGitHubData(username) {
+  try {
+    return await fetchJSON(`https://api.github.com/users/${username}`);
+  } catch (error) {
+    console.error("Error fetching GitHub data:", error);
+    return null;
+  }
+}
+
+
 // const navLinks = $$("nav a");
 
 // let currentLink = navLinks.find(
