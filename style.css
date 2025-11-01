@@ -94,9 +94,22 @@ button {
   margin: 0;
 }
 
+.project-info{
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+.year{
+  font-style: italic;
+  color: gray;
+  margin-top: 0.25em;
+}
+
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
-  text_wrap: balance;
+  text-wrap: balance;
 
   & + p {
     margin-top: 0.25em;
@@ -147,4 +160,85 @@ h2 {
 #profile-stats dd {
   margin: 0; 
   grid-row: 2; 
+}
+
+#projects-pie-plot {
+  width: 100%;
+  max-width: 20em;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  flex-shrink: 0;
+}
+
+#projects-pie-plot path {
+  cursor: pointer;
+  transition: 300ms;
+}
+
+#projects-pie-plot:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+  margin-block: 2em;
+}
+
+.container svg {
+  width: min(100%, 20em); 
+  height: auto;           
+  display: block;
+  flex-shrink: 0;         
+}
+
+.legend {
+  flex: 1;                  
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1em;
+  padding: 1em;
+  border: 1px solid oklch(50% 10% 200 / 40%);
+  border-radius: 0.5em;
+  background-color: oklch(97% 3% 200 / 5%);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 0.9em;
+}
+
+.legend .swatch {
+  display: inline-block;
+  width: 1em;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  border-radius: 0.25em;
+  border: 1px solid #333;
+}
+
+.searchBar {
+  display: block;
+  margin: 1.5em auto 2.5em;
+  padding: 0.75em 1.25em;
+  width: 100%;
+  max-width: 30em;
+  font-size: 1.1em;
+  border: 1.5px solid oklch(50% 10% 200 / 40%);
+  border-radius: 0.5em;
+  background-color: oklch(97% 3% 200 / 5%);
+  color: inherit;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+}
+
+.selected:is(path) {
+  fill: var(--color);
 }
