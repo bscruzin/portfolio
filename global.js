@@ -105,21 +105,40 @@ form?.addEventListener("submit", function (event) {
 });
 
 export function renderProjects(projects, containerElement, headingLevel = 'h2') {
-
   containerElement.innerHTML = '';
 
   for (let project of projects) {
     const article = document.createElement('article');
+
+    // Build title (linked only if project.url exists)
+    const titleHTML = project.url
+      ? `<${headingLevel}>
+           <a href="${project.url}" target="_blank" rel="noopener">
+             ${project.title}
+           </a>
+         </${headingLevel}>`
+      : `<${headingLevel}>${project.title}</${headingLevel}>`;
+
+    // Build image (clickable if project.url exists)
+    const imageHTML = project.url
+      ? `<a href="${project.url}" target="_blank" rel="noopener">
+           <img src="${project.image}" alt="${project.title}">
+         </a>`
+      : `<img src="${project.image}" alt="${project.title}">`;
+
     article.innerHTML = `
-    <div class = "project-header">
-      <${headingLevel}>${project.title}</${headingLevel}>
-    </div>
-      <img src="${project.image}" alt="${project.title}">
-    <div class = "project-info">
-      <p>${project.description}</p>
-      <p class = "year"><em>c. ${project.year}</em></p>
-    </div>
+      <div class="project-header">
+        ${titleHTML}
+      </div>
+
+      ${imageHTML}
+
+      <div class="project-info">
+        <p>${project.description}</p>
+        <p class="year"><em>c. ${project.year}</em></p>
+      </div>
     `;
+
     containerElement.appendChild(article);
   }
 }
