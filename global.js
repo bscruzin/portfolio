@@ -121,10 +121,11 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
 
     // Build image (clickable if project.url exists)
     const imageHTML = project.url
-      ? `<a href="${project.url}" target="_blank" rel="noopener">
-           <img src="${project.image}" alt="${project.title}">
-         </a>`
-      : `<img src="${project.image}" alt="${project.title}">`;
+	  ? `<a href="${project.url}" target="_blank" rel="noopener">
+	       <img src="${BASE_PATH}${project.image}" alt="${project.title}">
+	     </a>`
+	  : `<img src="${BASE_PATH}${project.image}" alt="${project.title}">`;
+
 
     article.innerHTML = `
       <div class="project-header">
