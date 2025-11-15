@@ -1,5 +1,12 @@
 [
   {
+    "title": "Bluebikes Traffic Visualization",
+    "year": "2025",
+    "image": "/images/Bikestalking-Screenshot.png",
+    "description": "An interactive map showing how bike traffic changes across Boston by time of day, with circle sizes for traffic volume and color for trip direction.",
+    "url": "https://bscruzin.github.io/bikestalking/" 
+  },
+  {
     "title": "Lorem ipsum dolor sit.",
     "year": "2025",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
