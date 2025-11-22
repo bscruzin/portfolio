@@ -43,9 +43,37 @@
   <h1 class="meta-title">Meta</h1>
 
   <h2>Commits by time of day</h2>
-  <div id="chart"></div>
-  <p id="selection-count">No commits selected</p>
-  <dl id="language-breakdown" class="stats"></dl>
+
+  <div class="time-controls" style="display: flex; align-items: baseline; gap: 1rem;">
+    <label for="commit-progress" style="flex: 1;">
+      Show commits until:
+      <input
+        type="range"
+        id="commit-progress"
+        min="0"
+        max="100"
+        value="100"
+        style="width: 100%;"
+      />
+    </label>
+    <time id="commit-time" style="margin-left: auto;">Loading…</time>
+  </div>
+  
+  <div id="scrolly-1">
+    
+    <div id="scatter-story">
+      <!-- You will replace this text later in the lab -->
+      <p>some filler text here</p>
+    </div>
+  
+    <div id="scatter-plot">
+      <div id="chart"></div>
+      <p id="selection-count">No commits selected</p>
+      <dl id="language-breakdown" class="stats"></dl>
+    </div>
+  
+  </div>
+  
 
   <script type="module" src="main.js"></script>
 
@@ -57,7 +85,7 @@
     <dd id="commit-date"></dd>
 
     <dt>Time</dt>
-    <dd id="commit-time"></dd>
+    <dd id="commit-time-tooltip"></dd>
 
     <dt>Author</dt>
     <dd id="commit-author"></dd>
@@ -66,6 +94,14 @@
     <dd id="commit-lines"></dd>
   </dl>
 
-  <p>This is the meta page.</p>
+  <div id="scrolly-2">
+    <div id="file-story">
+      <!-- generated commit steps will go here -->
+    </div>
+  
+    <div id="file-viz">
+      <dl id="files"></dl>
+    </div>
+  </div>  
 </body>
 </html>
